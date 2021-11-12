@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Open+Sans&family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+#game{
+    position: absolute;
+    left: 400px;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ff8fa1 ;    
+    height: 600px;
+    width: 700px;
+    overflow: hidden;
+}
+#gameText{
+    background-color: #fff;
+    text-align: center;
+    height: 120px;
+}
+#gameText a{
+    align-items: center;
+    color: #ff878d;
+    font-size: 45px;
+}
+#character{
+    background: none;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 530px;
+    z-index: 1;
+}
+#character img{
+    background: none;
+}
+.animateChar{
+    animation : jump 500ms ;
+}
+
+#block{
+    background: none;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 560px;
+    left: 500px;
+    animation : slideLeft 4s infinite;
+}
+#block img{
+    background: none;
+}
+
+footer{
+    background: none;
+    text-align: center;
+    font-size: 23px;
+    position: absolute;
+    top: 96vh;
+    left: 41%;
+}
+footer a i{
+   color: black;
+}
+@keyframes slideLeft{
+    0% { left: 660px;}
+    100% { left:-200px;}
+}
+
+@keyframes jump{
+    0% { top:530px;}
+    30% { top:490px;}
+    70% { top:490px;}
+    100% { top:530px;}
+}
+
+@media only screen and (max-width:480px) and (min-width: 320px){
+    #game{
+        width:95%;
+        position: absolute;
+        left: 10px;
+        top: 30px;
+    }
+    #gameText{
+        height: 80px;
+    }
+    #gameText a{
+        background-color: #fff;
+        height: 30px;
+        font-size: 25px;
+    }
+
+    #block{
+        position: absolute;
+        left: 300px;
+    }
+    footer{
+        left: 30%;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width:800px) and (min-width: 480px){
+    #game{
+        width:95%;
+        position: absolute;
+        left: 20px;
+    }
+    #gameText{
+        height: 80px;
+    }
+    #gameText a{
+        background-color: #fff;
+        height: 30px;
+        font-size: 33px;
+    }
+
+    #block{
+        position: absolute;
+        left: 450px;
+    }
+}
+
